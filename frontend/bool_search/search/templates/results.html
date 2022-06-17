@@ -1,0 +1,23 @@
+{% load staticfiles %}
+<body class="pageBackground"  >
+<div class="background" class="scr">
+<link href="{% static '../static/results.css' %}" rel="stylesheet"/>
+
+<h1 class="headline">You searched for {{searchedFor}}</h1>
+
+<h2 class="result">{{numOfResults}} results: </h2>
+<ol class="result">
+{% for result in topSongs %}
+    <li >{{result}}</li>
+    <br></br>
+{% endfor %}
+</ol>
+<h3 class="result"> Thank you for using our search engine </h3>
+<form method="POST"
+    action="{% url 'home' %}">
+    {% csrf_token %}
+    <button class="button" style="width:150px;height:50px; position: absolute; right: 50px"  >Back to searching</button>
+</form>
+
+</div>
+</body>

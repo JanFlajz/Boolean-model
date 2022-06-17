@@ -1,0 +1,75 @@
+<html>
+
+{% load staticfiles %}
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="author" content="colorlib.com">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400" rel="stylesheet"/>
+    <link href="{% static '../static/main.css' %}" rel="stylesheet"/>
+</head>
+<body>
+<div class="s132">
+    <form method="POST"
+    action="{% url 'search_results' %}">
+        {% csrf_token %}
+        <div class="inner-form">
+            <div class="input-field first-wrap">
+                <div class="input-select">
+                    <select data-trigger="" name="choices-single-defaul">
+                        <option>10</option>
+                        <option>20</option>
+                        <option>30</option>
+                        <option>40</option>
+                        <option>50</option>
+                        <option>60</option>
+                        <option>70</option>
+                        <option>80</option>
+                        <option>90</option>
+                        <option>100</option>
+                    </select>
+                </div>
+            </div>
+            <div class="input-field second-wrap">
+                <input id="search" type="text" name="inputTextField" placeholder="Enter Keywords"/>
+            </div>
+            <div class="input-field third-wrap">
+
+                <button class="btn-search" type="submit"  name = "searchButton">Search</button>
+
+            </div>
+        </div>
+
+        <br>
+        <br>
+        <div class="center-v center-h" >
+            <button class="btn-change" type="button" name = "btnAnd" onclick="appendSymbol('&')">And</button>
+            <button class="btn-change" type="button" name = "btnOr" onclick="appendSymbol('|')">Or</button>
+            <button class="btn-change" type="button" name = "btnLeftBracket" onclick="appendSymbol('(')">(</button>
+            <button class="btn-change" type="button" name = "btnRightBracket" onclick="appendSymbol(')')">)</button>
+        </div>
+    </form>
+</div>
+<script src="../static/choices.js"></script>
+<script>
+    const choices = new Choices('[data-trigger]',
+        {
+            searchEnabled: false,
+            itemSelectText: '',
+        });
+</script>
+<script>
+    function appendSymbol(symbol){
+        var element = document.getElementById("search")
+        element.value += ' '
+        element.value += symbol
+        element.value += ' '
+        element.focus()
+    }
+
+
+</script>
+
+</body>
+</html>

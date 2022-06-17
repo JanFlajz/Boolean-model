@@ -1,0 +1,20 @@
+2 soubory - "occSet.txt" a "songlist.txt"
+-----------------------------------------
+TODO: Po implementaci mě upozorni, budu muset změnit něco i v mojem kódu :)
+-----------------------------------------
+-----songlist.txt------
+songlist formát:
+	tid|jméno autora|nazev songu 
+legenda:
+	| označuje separátor, momentálně nastaven na <SEP>
+	tid označuje ID songu, nějaký "primární klíč"
+-----------------------------------------
+-----occSet.txt--------
+occSet formát:
+	tid|tidSlova:pocetVyskytu|tidSlova2:pocetVyskytu|...
+legenda:
+	| označuje separátor, momentálně nastaven na <SEP>
+	: označuje separátor, momentálně nastaven na :
+	tid označuje ID songu, o kterém je daný záznam
+	tidSlova označuje ID slova, které se v lyrics daného songu vyskytuje
+	pocetVyskytu označuje počet výskytů daného slova v songu

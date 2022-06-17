@@ -1,0 +1,42 @@
+.headline{
+    text-align: center;
+    font-family: Ubuntu, serif ;
+    color: white;
+}
+
+.button{
+    text-align: center;
+
+    background: #333333;
+    color: white;
+    border-color: white;
+    align-self: center;
+    position: center;
+    size: B5;
+
+}
+
+.background{
+
+    background-image: none;
+    background-color: #333333;
+    background-position: center;
+    position: inherit;
+
+
+
+}
+.result{
+    text-align: center;
+     color: white;
+     display: table;
+  margin-left: auto;
+  margin-right: auto;
+  list-style-position: inside;
+}
+/*
+image link https://wallpaperaccess.com/microphone
+ */
+.pageBackground{
+    background-image: url("mic.jpg");
+}

@@ -1,0 +1,29 @@
+1. /Dataset:
+	Tento adresar obsahuje puvodni dataset ze stranky Million Song Dataset, ktery je, soubor 
+	occSet.txt obsahuje vyskyt top words v jednotlivych 
+	pisnich, songList.txt obsahuje seznam vsech pisni definovany jejich id, nazvem a autorem a topWords.txt obsahuje 5000 nejcastejsich slov
+	
+2. /extendedBoolean obsahuje script main.py, ktery samotny slouzi k vyhledavani v kolekci textu.
+
+3. /migrations je defaultni soubor frameworku django
+
+4. /OurDataset/Dataset obsahuje defacto stejne soubory jako /Dataset, s tim rozdilem, ze tento dataset byl vytvoren nasim stemmingem z nami stahnutych pisnicek
+
+5. /preProcess obsahuje script main.py, ktery predpripravi nas dataset k vyhledavani
+
+6. /static jsou jsou staticke slozky, ktere doplnuji nase html webove rozhrani. main.css a results.css doplnuji web o cascadove styly, mic.jpg je obrazek v pozadi obou stranek
+	   a choices.js je javascriptovy doplnek pro vyhledavaci stranku z puvodni sablony
+	  
+7. /stemmming je adresar, ktery obsahuje scripty pro stahovani, upravovani a stemmovani textu pisni:
+		stemmer.py je script, ktery na danem datasetu pisnicek provede stemming a odstraneni vsech nepotrebnych elemntu
+		languages_and_countries.py je externi script, ve kterem je ulozen slovnik, ktery prevadi jazykovou ISO zkratku na cele slovo
+		installNLTK.sh je script, ktery stahuje knihovny potrebne pro stemming
+		/test je adresar s testovacimi soubory pro stemming a jejich vysledek
+		/scraping obsahuje scripty pro stahovani textu do nasi kolekce pomoci genius api
+			lyrics_scrapper.py stahuje podle seznamu, ktery byl dodan predpripravenym datasetem
+			our_song_scrapper.py stahuje podle seznamu autoru, ktere jsme vytvorili sami a kteri jsou ulozeni v authorlist*.txt
+		/realDataSet obsahuje soubor processedSongLyrics.txt, coz je databaze nasich textu pred stemmovanim
+8. /templates obsahuje .html kody pro nase webove stranky
+	
+	
+	
